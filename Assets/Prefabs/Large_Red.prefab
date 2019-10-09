@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 5795025034386202351}
   m_Layer: 0
   m_Name: Large_Red
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,7 +946,7 @@ Transform:
   - {fileID: 5118262525435225203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &445217987064492790
 Rigidbody2D:
   serializedVersion: 4
@@ -989,7 +989,8 @@ MonoBehaviour:
   bulletKnockback: 0
   cooldownTimer: 0
   rbody: {fileID: 0}
-  shootPoint: {fileID: 0}
+  shootPoint: {fileID: 5118262525435225203}
+  cannonBall: {fileID: 0}
 --- !u!114 &2073697016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1013,7 @@ MonoBehaviour:
   cooldownTimer: 0
   rbody: {fileID: 0}
   shootPoint: {fileID: 0}
+  cannonBall: {fileID: 0}
 --- !u!70 &5795025034386202351
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class movement : MonoBehaviour
     [Header("Game Components")]
     public Rigidbody2D rbody;
     public Transform shootPoint;
+    public GameObject cannonBall;
 
 
     void Start()
@@ -30,11 +32,20 @@ public class movement : MonoBehaviour
         turnSpeed = 2;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if(Input.GetButton("Jump"))
+        if (Input.GetButton("Jump"))
         {
             rbody.AddForce(transform.up * thrustSpeed);
+        }
+    }
+
+    void Update()
+    {
+
+        if (Input.GetButton("Fire1"))
+        {
+            Shoot();
         }
 
         Vector3 lookVec = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 4096);
@@ -45,5 +56,10 @@ public class movement : MonoBehaviour
 
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
-    }   
+    }
+
+    public void Shoot()
+    {
+        Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
+    }
 }
