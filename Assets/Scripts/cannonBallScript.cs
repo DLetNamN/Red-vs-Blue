@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cannonBallScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float bulletDamage;
     void Start()
     {
         
@@ -16,7 +16,7 @@ public class cannonBallScript : MonoBehaviour
 
         if(collision.tag == "Player")
         {
-            collision.transform.GetComponent<movement>().health -= 1;
+            collision.transform.GetComponent<movement>().health -= bulletDamage;
         }
     }
 }

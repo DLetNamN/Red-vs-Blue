@@ -886,8 +886,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.25
+  m_UseAutoMass: 1
+  m_Mass: 0.21351525
   m_LinearDrag: 0.25
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -909,16 +909,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 
-  thrustSpeed: 0
-  turnSpeed: 0
-  health: 0
-  bulletDmg: 0
-  bulletSpeed: 0
+  thrustSpeed: 4
+  turnSpeed: 4
+  health: 100
+  bulletDmg: 20
+  bulletSpeed: 2
   bulletKnockback: 0
   cooldownTimer: 0
   rbody: {fileID: 0}
   shootPoint: {fileID: 7228520540341371194}
-  cannonBall: {fileID: 0}
+  cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
+    type: 3}
 --- !u!70 &3792938248881109086
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

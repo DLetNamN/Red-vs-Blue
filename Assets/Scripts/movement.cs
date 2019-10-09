@@ -26,10 +26,6 @@ public class movement : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-
-        thrustSpeed = 2;
-
-        turnSpeed = 2;
     }
 
     void FixedUpdate()
@@ -43,7 +39,7 @@ public class movement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -60,6 +56,8 @@ public class movement : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
+        var ball = Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
+        ball.GetComponent<cannonBallScript>().bulletDamage = bulletDmg;
+        ball.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
