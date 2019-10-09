@@ -17,10 +17,13 @@ public class movement : MonoBehaviour
     public float bulletKnockback;
     public float cooldownTimer;
 
+    private float cooldown;
+
     [Header("Game Components")]
     public Rigidbody2D rbody;
     public Transform shootPoint;
     public GameObject cannonBall;
+    public AudioSource cannonBallSound;
 
 
     void Start()
@@ -38,6 +41,11 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        cooldown -= Time.deltaTime;
+        if(cooldown <= 0)
+        {
+            cooldown = 0;
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -56,8 +64,12 @@ public class movement : MonoBehaviour
 
     public void Shoot()
     {
-        var ball = Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
-        ball.GetComponent<cannonBallScript>().bulletDamage = bulletDmg;
-        ball.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+        if (cooldown == 0)
+        {
+            var ball = Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
+            ball.GetComponent<cannonBallScript>().bulletDamage = bulletDmg;
+            ball.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+            cooldown = cooldownTimer;
+        }
     }
 }

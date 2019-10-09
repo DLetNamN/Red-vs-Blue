@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774365489951684749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.595, z: 0}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6322329064589387642}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   bulletDmg: 50
   bulletSpeed: 6
   bulletKnockback: 0
-  cooldownTimer: 0
+  cooldownTimer: 0.5
   rbody: {fileID: 0}
   shootPoint: {fileID: 5118262525435225203}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,

@@ -915,7 +915,7 @@ MonoBehaviour:
   bulletDmg: 20
   bulletSpeed: 2
   bulletKnockback: 0
-  cooldownTimer: 0
+  cooldownTimer: 0.2
   rbody: {fileID: 0}
   shootPoint: {fileID: 7228520540341371194}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
@@ -960,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8756855895890862445}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6322329064589387642}
