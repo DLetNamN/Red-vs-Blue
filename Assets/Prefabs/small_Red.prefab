@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1322574243836602107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.875, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6322329064589387642}
   m_RootOrder: 1
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 6189389733245461955}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: -0.00000081956375}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2566630075136907260}
   - {fileID: 6322329062958880811}
@@ -920,6 +920,8 @@ MonoBehaviour:
   shootPoint: {fileID: 7228520540341371194}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
+  cannonBallSound: {fileID: 1729629843383007623, guid: 20e12eba9d086f74abf5aef229e518d7,
+    type: 3}
 --- !u!70 &3792938248881109086
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -933,8 +935,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019999966, y: -0.10493882}
-  m_Size: {x: 0.375, y: 0.97012246}
+  m_Offset: {x: 0, y: -0.08}
+  m_Size: {x: 0.33, y: 0.75}
   m_Direction: 0
 --- !u!1 &8756855895890862445
 GameObject:

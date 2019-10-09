@@ -69,6 +69,7 @@ public class movement : MonoBehaviour
             var ball = Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
             ball.GetComponent<cannonBallScript>().bulletDamage = bulletDmg;
             ball.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+            cannonBallSound.Play();
             cooldown = cooldownTimer;
         }
     }

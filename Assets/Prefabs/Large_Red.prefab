@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774365489951684749}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3843916447666447760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.5, z: 0}
-  m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 6322329064589387642}
   m_RootOrder: 1
@@ -992,6 +992,7 @@ MonoBehaviour:
   shootPoint: {fileID: 5118262525435225203}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
+  cannonBallSound: {fileID: 0}
 --- !u!114 &2073697016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,6 +1017,8 @@ MonoBehaviour:
   shootPoint: {fileID: 5118262525435225203}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
+  cannonBallSound: {fileID: 1729629843383007623, guid: 20e12eba9d086f74abf5aef229e518d7,
+    type: 3}
 --- !u!70 &5795025034386202351
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1029,8 +1032,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0015000005, y: -0.07}
-  m_Size: {x: 0.4, y: 0.95}
+  m_Offset: {x: 0, y: -0.05}
+  m_Size: {x: 0.5, y: 1.15}
   m_Direction: 0
 --- !u!1 &8536017606166655332
 GameObject:
@@ -1057,7 +1060,7 @@ Transform:
   m_GameObject: {fileID: 8536017606166655332}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6322329062964641219}
   - {fileID: 6322329062958880811}
