@@ -24,11 +24,13 @@ public class movement : MonoBehaviour
     public Transform shootPoint;
     public GameObject cannonBall;
     public AudioSource cannonBallSound;
+    public Animator anim;
 
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -69,8 +71,17 @@ public class movement : MonoBehaviour
             var ball = Instantiate(cannonBall, shootPoint.position, shootPoint.rotation);
             ball.GetComponent<cannonBallScript>().bulletDamage = bulletDmg;
             ball.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+
+            anim.SetTrigger("Shoot");
+
+            rbody.AddForce(-transform.up * bulletKnockback, ForceMode2D.Impulse);
+
             cannonBallSound.Play();
             cooldown = cooldownTimer;
+        }
+        else
+        {
+
         }
     }
 }

@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774365489951684749}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6322329064589387642}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &3843916447666447760
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,9 +920,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6322329064589387642}
   - component: {fileID: 445217987064492790}
-  - component: {fileID: 5726182993693761241}
   - component: {fileID: 2073697016}
   - component: {fileID: 5795025034386202351}
+  - component: {fileID: 6425090492742109799}
   m_Layer: 0
   m_Name: large_Red
   m_TagString: Player
@@ -959,16 +959,16 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.49775583
+  m_Mass: 0.7507434
   m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5726182993693761241
+--- !u!114 &2073697016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -983,42 +983,16 @@ MonoBehaviour:
   player: 
   thrustSpeed: 6
   turnSpeed: 2
-  health: 100
-  bulletDmg: 20
-  bulletSpeed: 6
-  bulletKnockback: 0
-  cooldownTimer: 0
-  rbody: {fileID: 0}
-  shootPoint: {fileID: 5118262525435225203}
-  cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
-    type: 3}
-  cannonBallSound: {fileID: 0}
---- !u!114 &2073697016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6322329064589387641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07547e6d060422f49a984597ac75380c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 
-  thrustSpeed: 0
-  turnSpeed: 0
   health: 200
   bulletDmg: 50
-  bulletSpeed: 6
-  bulletKnockback: 0
+  bulletSpeed: 12
+  bulletKnockback: 1
   cooldownTimer: 0.5
   rbody: {fileID: 0}
   shootPoint: {fileID: 5118262525435225203}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
-  cannonBallSound: {fileID: 1729629843383007623, guid: 20e12eba9d086f74abf5aef229e518d7,
-    type: 3}
+  cannonBallSound: {fileID: 0}
 --- !u!70 &5795025034386202351
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1035,6 +1009,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   m_Size: {x: 0.5, y: 1.15}
   m_Direction: 0
+--- !u!95 &6425090492742109799
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322329064589387641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3e09e8778d88841aa5110850f270d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8536017606166655332
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class cannonBallScript : MonoBehaviour
 {
     public float bulletDamage;
+    public GameObject explosion;
     void Start()
     {
         
@@ -12,11 +13,15 @@ public class cannonBallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
 
         if(collision.tag == "Player")
         {
             collision.transform.GetComponent<movement>().health -= bulletDamage;
+        }
+        if(collision.tag != "Bullet")
+        {
+            Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
     }
 }

@@ -851,6 +851,7 @@ GameObject:
   - component: {fileID: 3920155497587010249}
   - component: {fileID: 1130449660828974797}
   - component: {fileID: 3792938248881109086}
+  - component: {fileID: 7327020586172785646}
   m_Layer: 0
   m_Name: small_Red
   m_TagString: Player
@@ -867,7 +868,7 @@ Transform:
   m_GameObject: {fileID: 6322329064589387641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7811456542237184402}
   - {fileID: 8096796871991850594}
@@ -887,7 +888,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.21351525
+  m_Mass: 0.22412986
   m_LinearDrag: 0.25
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -913,15 +914,14 @@ MonoBehaviour:
   turnSpeed: 4
   health: 100
   bulletDmg: 20
-  bulletSpeed: 2
-  bulletKnockback: 0
+  bulletSpeed: 6
+  bulletKnockback: 0.8
   cooldownTimer: 0.2
   rbody: {fileID: 0}
   shootPoint: {fileID: 7228520540341371194}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
-  cannonBallSound: {fileID: 1729629843383007623, guid: 20e12eba9d086f74abf5aef229e518d7,
-    type: 3}
+  cannonBallSound: {fileID: 0}
 --- !u!70 &3792938248881109086
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -938,6 +938,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.08}
   m_Size: {x: 0.33, y: 0.75}
   m_Direction: 0
+--- !u!95 &7327020586172785646
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322329064589387641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14764b708c2b2ed4b9e730be911642d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8756855895890862445
 GameObject:
   m_ObjectHideFlags: 0
