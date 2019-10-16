@@ -31,6 +31,7 @@ public class movement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
     }
 
     void FixedUpdate()
