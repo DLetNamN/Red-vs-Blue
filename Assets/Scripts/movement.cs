@@ -50,12 +50,12 @@ public class movement : MonoBehaviour
             cooldown = 0;
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
 
-        Vector3 lookVec = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 4096);
+        Vector3 lookVec = new Vector3(Input.GetAxis("Horizontal" + player), Input.GetAxis("Vertical" + player), 4096);
         
         if(lookVec.x != 0 || lookVec.y != 0)
         {

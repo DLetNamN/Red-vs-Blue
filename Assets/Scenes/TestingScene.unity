@@ -234,6 +234,11 @@ PrefabInstance:
       propertyPath: cannonBallSound
       value: 
       objectReference: {fileID: 2038892604}
+    - target: {fileID: 1130449660828974797, guid: 2a87b5642e1f07b48bf79e5d3723c9f9,
+        type: 3}
+      propertyPath: player
+      value: _p2
+      objectReference: {fileID: 0}
     - target: {fileID: 1536022891830551277, guid: 2a87b5642e1f07b48bf79e5d3723c9f9,
         type: 3}
       propertyPath: m_Color.r
@@ -460,6 +465,10 @@ PrefabInstance:
     - target: {fileID: 2073697016, guid: 501dff65c78f47a43a7744b7ca125559, type: 3}
       propertyPath: cooldownTimer
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073697016, guid: 501dff65c78f47a43a7744b7ca125559, type: 3}
+      propertyPath: player
+      value: _p1
       objectReference: {fileID: 0}
     - target: {fileID: 6322329062482187333, guid: 501dff65c78f47a43a7744b7ca125559,
         type: 3}
