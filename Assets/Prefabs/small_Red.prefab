@@ -916,12 +916,13 @@ MonoBehaviour:
   bulletDmg: 20
   bulletSpeed: 6
   bulletKnockback: 0.8
-  cooldownTimer: 0.2
+  cooldownTimer: 0.25
   rbody: {fileID: 0}
   shootPoint: {fileID: 7228520540341371194}
   cannonBall: {fileID: 2836164275617079470, guid: 3e7f00c7ca05dac46aebac83cf910fe5,
     type: 3}
   cannonBallSound: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!70 &3792938248881109086
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class movement : MonoBehaviour
             cooldown = 0;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             Shoot();
         }
@@ -79,9 +79,15 @@ public class movement : MonoBehaviour
             cannonBallSound.Play();
             cooldown = cooldownTimer;
         }
-        else
-        {
+    }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            var dir = transform.position - collision.transform.position;
+            rbody.AddForce(dir * 0.8f, ForceMode2D.Impulse);
+            anim.SetTrigger("Dmg");
         }
     }
 }
