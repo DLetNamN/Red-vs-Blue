@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class movement : MonoBehaviour
@@ -25,18 +26,22 @@ public class movement : MonoBehaviour
     public GameObject cannonBall;
     public AudioSource cannonBallSound;
     public Animator anim;
+    public Image hpBar;
 
+    private float healthStart;
 
     void Start()
     {
+        healthStart = health;
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
+        hpBar.fillAmount = health;
     }
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump" + player ))
         {
             rbody.AddForce(transform.up * thrustSpeed);
         }
@@ -44,13 +49,14 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        hpBar.fillAmount = health / healthStart;
         cooldown -= Time.deltaTime;
         if(cooldown <= 0)
         {
             cooldown = 0;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Shoot" + player))
         {
             Shoot();
         }
