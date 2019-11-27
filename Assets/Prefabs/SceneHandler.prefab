@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4039706378735370147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4039706378735370145}
+  - component: {fileID: 4039706378735370146}
+  m_Layer: 0
+  m_Name: SceneHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4039706378735370145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039706378735370147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.453989, y: -3.4838226, z: -5.7855806}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4039706378735370146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039706378735370147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227bd88993018184f8723fbcad726d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redBigBoat: {fileID: 6322329064589387641, guid: aa6214aaca2751043afd5668dec43a81,
+    type: 3}
+  redSmallBoat: {fileID: 6322329064589387641, guid: 2a87b5642e1f07b48bf79e5d3723c9f9,
+    type: 3}
+  blueBigBoat: {fileID: 6322329064589387641, guid: 307ad65637150a54a8c441f711857c1c,
+    type: 3}
+  blueSmallBoat: {fileID: 6322329064589387641, guid: 3196bcd7f38469242bee1e581d1674f5,
+    type: 3}
+  redSpawnPosition: {fileID: 0}
+  blueSpawnPosition: {fileID: 0}

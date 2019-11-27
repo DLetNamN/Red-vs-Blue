@@ -30,6 +30,8 @@ public class movement : MonoBehaviour
 
     private float healthStart;
 
+    private SceneHandlerScript sceneHandler;
+
     void Start()
     {
         healthStart = health;
@@ -37,6 +39,8 @@ public class movement : MonoBehaviour
         anim = GetComponent<Animator>();
 
         hpBar.fillAmount = health;
+
+        sceneHandler = GameObject.Find("SceneHandler").GetComponent<SceneHandlerScript>();
     }
 
     void FixedUpdate()
@@ -49,7 +53,12 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        hpBar.fillAmount = health / healthStart;
+        if(health <= 0)
+        {
+            sceneHandler.MatchOver(player);
+            Destroy(gameObject);
+        }
+
         cooldown -= Time.deltaTime;
         if(cooldown <= 0)
         {
@@ -95,6 +104,11 @@ public class movement : MonoBehaviour
             var dir = transform.position - collision.transform.position;
             rbody.AddForce(dir * 0.8f, ForceMode2D.Impulse);
             anim.SetTrigger("Dmg");
+            hpBar.fillAmount = health / healthStart;
+            if (hpBar.fillAmount < 0.3)
+            {
+                hpBar.color = Color.red;
+            }
         }
     }
 }
